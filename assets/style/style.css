@@ -1100,6 +1100,71 @@ body {
   #parallax-vigo { height: 56vh; min-height: 420px; }
   .parallax-bg { transform: none !important; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Cards con scroll interno cuando el contenido excede ===== */
+.card-inner{
+  min-height: 320px;
+  height: 340px;            /* puedes subir a 360–380 si quieres más área */
+}
+
+.card-face{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Frente */
+.card-front img{ flex: 0 0 130px; } /* imagen fija arriba */
+.card-front h3{ margin-top: 10px; }
+
+/* Reverso con scroll */
+.card-back{
+  overflow-y: auto;         /* ← aquí aparece la barra a la derecha */
+  scrollbar-width: thin;    /* Firefox */
+}
+
+/* Estética de scroll (WebKit) */
+.card-back::-webkit-scrollbar{
+  width: 10px;
+}
+.card-back::-webkit-scrollbar-track{
+  background: rgba(0,0,0,.06);
+  border-radius: 10px;
+}
+.card-back::-webkit-scrollbar-thumb{
+  background: rgba(var(--brand-primary-rgb) / .55);
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,.6);
+}
+.card-back::-webkit-scrollbar-thumb:hover{
+  background: rgba(var(--brand-primary-rgb) / .75);
+}
+
+/* Si el frente también llegara a desbordar (títulos largos), habilita: */
+/*
+.card-front{ overflow-y: auto; }
+*/
+
+
+
+
+
+
+
 /* ==========================
    FIN STYLE.CSS
    ========================== */
