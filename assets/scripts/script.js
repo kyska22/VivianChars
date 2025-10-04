@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const fadeElements = document.querySelectorAll(".fade-up");
-  const featureCards = document.querySelectorAll(".feature-card");
+  // 🔧 Tus tarjetas son .course-card (no .feature-card)
+  const courseCards = document.querySelectorAll(".course-card");
   const statNumbers = document.querySelectorAll(".stat-number");
   const statsSection = document.querySelector(".stats-section");
   const parallaxSection = document.getElementById("parallax-vigo");
@@ -9,17 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
   let statsAnimated = false;
 
   /* ========== Fade-in inicial ========== */
-  fadeElements.forEach((el) => setTimeout(() => el.classList.add("show"), 200));
+  setTimeout(() => fadeElements.forEach(el => el.classList.add("show")), 200);
 
-  /* ========== IntersectionObserver (cards + fade) ========== */
+  /* ========== IntersectionObserver (fade + cards) ========== */
   const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => e.isIntersecting && (e.target.classList.add("show"), io.unobserve(e.target)));
+    entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("show");
+        io.unobserve(e.target);
+      });
     },
     { threshold: 0.2 }
   );
-  fadeElements.forEach((el) => io.observe(el));
-  featureCards.forEach((card) => io.observe(card));
+  fadeElements.forEach(el => io.observe(el));
+  courseCards.forEach(card => io.observe(card));
 
   /* ========== Contadores ========== */
   function animateCounter(element, target) {
@@ -37,33 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 20);
   }
 
-  /* ========== Parallax RELATIVO A LA SECCIÓN ========== */
+  /* ========== Parallax relativo a la sección (suave) ========== */
   function updateParallax() {
-    if (!parallaxSection) return;
+    if (!parallaxSection || !parallaxImg) return;
     const rect = parallaxSection.getBoundingClientRect();
 
-    // si está fuera de pantalla no hacemos nada (performance)
+    // evita cálculos si está fuera de pantalla
     if (rect.bottom <= 0 || rect.top >= window.innerHeight) return;
 
-    // progreso dentro de la sección (0 al entrar, 1 al salir)
-    const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-    // desplazamiento suave (ajusta el factor 60 a tu gusto)
-    const y = (rect.top * -0.4); // mueve en sentido contrario al scroll
-
-    if (parallaxImg) {
-      // caso <img class="parallax-bg">
-      parallaxImg.style.transform = `translate3d(0, ${y}px, 0)`;
-      parallaxImg.style.willChange = "transform";
-      parallaxImg.style.pointerEvents = "none";
-    } else {
-      // caso background-image en el <section>
-      parallaxSection.style.backgroundPositionY = `${-progress * 60}px`;
-    }
+    // factor de movimiento: mueve en sentido contrario al scroll
+    const y = rect.top * -0.4;
+    parallaxImg.style.transform = `translate3d(0, ${y}px, 0)`;
   }
 
   /* ========== Scroll handler ========== */
   function onScroll() {
-    // Navbar
+    // Navbar shrink
     if (window.scrollY > 50) navbar.classList.add("scrolled");
     else navbar.classList.remove("scrolled");
 
@@ -75,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const r = statsSection.getBoundingClientRect();
       if (r.top < window.innerHeight - 200) {
         statsAnimated = true;
-        statNumbers.forEach((stat) => {
+        statNumbers.forEach(stat => {
           const target = parseFloat(stat.getAttribute("data-target"));
           animateCounter(stat, target);
         });
@@ -85,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Primer pintado
   onScroll();
-  // Listeners
+
+  // Listeners (passive para performance)
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", updateParallax, { passive: true });
 });

@@ -1,289 +1,275 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivian Chars </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="/assets/style/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivian Chars</title>
+
+  <!-- Iconos -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/style/style.css" />
 </head>
 <body>
-  
-<header class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="assets/video/135360-761676421_small.mp4" type="video/mp4">
-    Tu navegador no soporta videos HTML5.
-  </video>
-  <div class="overlay"></div>
-  
-  <nav class="navbar">
-    <div class="logo">
-      <img src="assets/img/logo.png" alt="LOGO" />
-    </div>
+  <!-- HERO -->
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-hero.jpg">
+      <source src="assets/video/135360-761676421_small.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="overlay" aria-hidden="true"></div>
 
-    <ul class="nav-links">
-      <li><a href="#">Soluciones</a></li>
-      <li><a href="#">Quien Soy</a></li>
-      <li><a href="#">Cursos</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#" class="btn-outline">Empezar</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar" aria-label="Principal">
+      <a class="logo" href="/" aria-label="Inicio">
+        <img src="assets/img/logo.png" alt="Logo Vivian Chars" height="75" width="75" loading="eager"/>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#soluciones">Soluciones</a></li>
+        <li><a href="#quien-soy">Quién Soy</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contacto" class="btn-outline">Empezar</a></li>
+      </ul>
+    </nav>
 
-  <div class="hero-content">
-    <h1 class="fade-up">Descubrirte a ti mismo es el viaje más profundo que emprenderás. En el ruido constante de la vida, el  <br> <strong>autoconocimiento</strong> no es solo una herramienta, es un acto de valentía</h1>
-    <p class="fade-up delay-1">Es la linterna que ilumina tus fortalezas ocultas y tus miedos más profundos, permitiéndote vivir no como un eco de las expectativas ajenas, sino como la persona que realmente eres. Acepta este viaje interior y comienza a forjar una vida que resuene con la verdad de tu propio ser.</p>
-    <a href="#" class="btn-primary fade-up delay-2">Más información</a>
-  </div>
-</header>
-
-<section class="features-section fade-up">
-  <div class="features-container">
-    <!-- Columna izquierda (texto centrado) -->
-    <div class="features-text">
-      <h2>Cursos</h2>
-      <p>
-        Nuestros programas están diseñados para tu <strong>crecimiento personal</strong> con
-        herramientas prácticas de <strong>PNL</strong> y <strong>coaching ontológico</strong>.
-        Aprenderás a identificar creencias limitantes, desarrollar hábitos conscientes y comunicarte
-        con claridad para crear resultados sostenibles. No es teoría: es transformación aplicada a tu
-        vida diaria.
+    <div class="hero-content">
+      <h1 class="fade-up">
+        Descubrirte a ti mismo es el viaje más profundo que emprenderás. En el ruido constante de la vida, el<br />
+        <strong>autoconocimiento</strong> no es solo una herramienta, es un acto de valentía.
+      </h1>
+      <p class="fade-up delay-1">
+        Es la linterna que ilumina tus fortalezas ocultas y tus miedos más profundos, permitiéndote vivir no como un eco de las expectativas ajenas, sino como la persona que realmente eres.
       </p>
+      <a href="#cursos" class="btn-primary fade-up delay-2">Más información</a>
     </div>
+  </header>
 
-    <!-- Columna derecha (grid 2x2 con flip cards) -->
-    <div class="features-grid">
-      <!-- Card 1 -->
- <div class="course-card">
-        <div class="card-inner">
-          <div class="card-face card-front">
-            <img src="assets/img/cursos/collage.png" alt="Collage Funcional">
-            <h3>Collage Funcional</h3>
-          </div>
-          <div class="card-face card-back">
-            <h3>Collage Funcional</h3>
-            <p>Collage Funcional es un espacio creativo para reconectar contigo mismo a través de la percepción, la energía y el autoconocimiento.
-            <p>Aprenderás a observar tus pensamientos, emociones y relaciones desde una nueva mirada.</p>
-            <p>Exploraremos los tres canales de percepción (visual, auditivo y kinestésico), trabajaremos tu mapa personal y activaremos tu energía creativa y emocional para atraer bienestar, abundancia y equilibrio.</p>
-            <p>Una experiencia práctica, inspiradora y transformadora.</p>
-            <a href="#" class="card-link">Ver detalles</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="course-card">
-        <div class="card-inner">
-          <div class="card-face card-front">
-            <img src="assets/img/cursos/coherencia.png" alt="La Coherencia: el arte de no ser un hipócrita">
-            <h3>La Coherencia: el arte de no ser un hipócrita</h3>
-          </div>
-          <div class="card-face card-back">
-            <h3>La Coherencia: el arte de no ser un hipócrita</h3>
-            <p>La Coherencia: el arte de no ser un hipócrita es un viaje hacia la autenticidad. Aprenderás a alinear lo que piensas, sientes, dices y haces, reconectando con tu conciencia y tu verdad interior.</p>
-            <p>A través de ejercicios de reflexión, consciencia y acción consciente, descubrirás cómo liberarte del autoengaño, las falsas expectativas y el drama interno.</p>
-            <p>El resultado: una vida más íntegra, pacífica y coherente contigo mismo y con los demás.</p>
-            <a href="#" class="card-link">Ver detalles</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="course-card">
-        <div class="card-inner">
-          <div class="card-face card-front">
-            <img src="assets/img/cursos/claridad.jpg" alt="Claridad y Propósito">
-            <h3>Claridad y Propósito</h3>
-          </div>
-          <div class="card-face card-back">
-            <h3>Claridad y Propósito</h3>
-            <p>Define visión, objetivos y métricas personales desde el coaching ontológico. Alinea acción y sentido.</p>
-            <a href="#" class="card-link">Ver detalles</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="course-card">
-        <div class="card-inner">
-          <div class="card-face card-front">
-            <img src="assets/img/cursos/gestion-emocional.jpg" alt="Gestión Emocional">
-            <h3>Gestión Emocional</h3>
-          </div>
-          <div class="card-face card-back">
-            <h3>Gestión Emocional</h3>
-            <p>Regulación emocional y estados de recursos. Protocolos simples para estrés, foco y resiliencia.</p>
-            <a href="#" class="card-link">Ver detalles</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA debajo de las 4 tarjetas -->
-  <div class="features-cta">
-    <a href="/cursos.html" class="btn-secondary">Ver todos los cursos</a>
-  </div>
-</section>
-
-<!-- PARALLAX VIGO -->
-<section class="parallax-section" id="parallax-vigo">
-  <img src="assets/img/vigo.jpeg" alt="Vigo, España" class="parallax-bg" loading="lazy">
-  <div class="parallax-overlay"></div>
-  <div class="parallax-content">
-    <div class="parallax-container">
-      <div class="parallax-text">
-        <h2 class="fade-up">Respira, mira lejos, vuelve a ti</h2>
-        <p class="fade-up delay-1">
-          Una pausa consciente para reconectar con tu propósito. Como el océano en Vigo:
-          movimiento constante, calma profunda.
+  <!-- FEATURES / CURSOS -->
+  <section id="cursos" class="features-section fade-up">
+    <div class="features-container">
+      <div class="features-text">
+        <h2>Cursos</h2>
+        <p>
+          Nuestros programas están diseñados para tu <strong>crecimiento personal</strong> con herramientas prácticas de <strong>PNL</strong> y <strong>coaching ontológico</strong>. Aprenderás a identificar creencias limitantes, desarrollar hábitos conscientes y comunicarte con claridad para crear resultados sostenibles.
         </p>
-        <a href="#cursos" class="btn-primary fade-up delay-2">Explorar cursos</a>
+      </div>
+
+      <div class="features-grid">
+        <!-- Card 1 -->
+        <article class="course-card" aria-label="Collage Funcional">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="assets/img/cursos/collage.png" alt="Collage Funcional" loading="lazy" />
+              <h3>Collage Funcional</h3>
+            </div>
+            <div class="card-face card-back">
+              <h3>Collage Funcional</h3>
+              <p>Un espacio creativo para reconectar contigo mismo a través de la percepción, la energía y el autoconocimiento.</p>
+              <p>Exploraremos percepción (VAK), mapa personal y activación de energía creativa y emocional para atraer bienestar, abundancia y equilibrio.</p>
+              <a href="#" class="card-link">Ver detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="course-card" aria-label="La Coherencia: el arte de no ser un hipócrita">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="assets/img/cursos/coherencia.png" alt="La Coherencia: el arte de no ser un hipócrita" loading="lazy" />
+              <h3>La Coherencia: el arte de no ser un hipócrita</h3>
+            </div>
+            <div class="card-face card-back">
+              <h3>La Coherencia: el arte de no ser un hipócrita</h3>
+              <p>Alinea lo que piensas, sientes, dices y haces. Reconecta con tu verdad interior y deja atrás el autoengaño.</p>
+              <p>Ejercicios de reflexión, consciencia y acción para vivir con integridad y paz.</p>
+              <a href="#" class="card-link">Ver detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="course-card" aria-label="Claridad y Propósito">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="assets/img/cursos/claridad.jpg" alt="Claridad y Propósito" loading="lazy" />
+              <h3>Claridad y Propósito</h3>
+            </div>
+            <div class="card-face card-back">
+              <h3>Claridad y Propósito</h3>
+              <p>Define visión, objetivos y métricas personales desde el coaching ontológico. Alinea acción y sentido.</p>
+              <a href="#" class="card-link">Ver detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="course-card" aria-label="Gestión Emocional">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <img src="assets/img/cursos/gestion-emocional.jpg" alt="Gestión Emocional" loading="lazy" />
+              <h3>Gestión Emocional</h3>
+            </div>
+            <div class="card-face card-back">
+              <h3>Gestión Emocional</h3>
+              <p>Regulación emocional y estados de recursos. Protocolos simples para estrés, foco y resiliencia.</p>
+              <a href="#" class="card-link">Ver detalles</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-  </div>
-</section>
 
+    <div class="features-cta">
+      <a href="/cursos.html" class="btn-secondary">Ver todos los cursos</a>
+    </div>
+  </section>
 
-<!-- SECCIÓN DE ESTADÍSTICAS CON CONTADORES -->
-<section class="stats-section">
-  <div class="stats-container">
-    <div class="stats-content">
-      <div class="stats-text fade-up">
-        <h2>Resultados</h2>
+  <!-- PARALLAX VIGO -->
+  <section class="parallax-section" id="parallax-vigo" aria-label="Vigo, España">
+    <img src="assets/img/vigo.jpeg" alt="" class="parallax-bg" loading="lazy" />
+    <div class="parallax-overlay" aria-hidden="true"></div>
+    <div class="parallax-content">
+      <div class="parallax-container">
+        <div class="parallax-text">
+          <h2 class="fade-up">Respira, mira lejos, vuelve a ti</h2>
+          <p class="fade-up delay-1">Una pausa consciente para reconectar con tu propósito. Como el océano en Vigo: movimiento constante, calma profunda.</p>
+          <a href="#cursos" class="btn-primary fade-up delay-2">Nuestro Blog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stats-content">
+        <div class="stats-text fade-up">
+          <h2>Resultados</h2>
+          <p></p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item fade-up delay-1">
+            <div class="stat-number" data-target="150">0</div><div class="stat-plus">+</div>
+            <div class="stat-label">Proyectos Completados</div>
+          </div>
+
+          <div class="stat-item fade-up delay-2">
+            <div class="stat-number" data-target="95">0</div><div class="stat-plus">%</div>
+            <div class="stat-label">Precisión en Predicciones</div>
+          </div>
+
+          <div class="stat-item fade-up delay-3">
+            <div class="stat-number" data-target="2.5">0</div><div class="stat-plus">M</div>
+            <div class="stat-label">Registros Procesados</div>
+          </div>
+
+          <div class="stat-item fade-up delay-4">
+            <div class="stat-number" data-target="24">0</div><div class="stat-plus">/7</div>
+            <div class="stat-label">Soporte Disponible</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIOS + CTA -->
+  <section class="partners-cta-section" id="soluciones">
+    <div class="partners-bar" aria-label="Nuestros socios">
+      <div class="partners-container">
+        <div class="partners-title">Nuestros socios</div>
+        <div class="partners-logos">
+          <div class="partner-logo">MIKRON</div>
+          <div class="partner-logo">Pomegranate</div>
+          <div class="partner-logo">Gargoosh</div>
+          <div class="partner-logo">VELO.CITY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-content">
+      <div class="cta-container">
+        <div class="cta-video-container fade-up">
+          <video class="cta-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/poster-cta.jpg">
+            <source src="assets/video/faro02.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay" aria-hidden="true"></div>
+          <div class="video-text">
+            <h3>¿Estás listo para acelerar tu negocio?</h3>
+          </div>
+        </div>
+
+        <div class="cta-text-container fade-up delay-1" id="quien-soy">
+          <div class="cta-text">
+            <h2>Quién Soy</h2>
+            <p>Si tuviera que definirme en una palabra sería “Experiencia”. Más de veinticinco años en comportamiento humano, PNL y liderazgo…</p>
+            <p>Si tuviera que definirme en una palabra sería “Experiencia”. Más de veinticinco años en comportamiento humano, PNL y liderazgo…</p>
+            <p>Soy intuitiva, tengo capacidad de decisión y puedo inspirar valor.</p>
+            <p>Ser madre de tres hijos con altas capacidades me ayudo a desarrollar ciertas habilidades de manejo de la comunicación asertiva.</p>
+            <p>Tanto el conocimiento adquirido por las experiencias de la vida, como la perspectiva adicional obtenidas de mis estudios, trabajos y lectura, han fortalecido mi capacidad de enseñanza y mi habilidad de desarrollar talleres a medida y presentaciones para empresa y particulares.</p>
+            <p>He criado a mis hijos con éxito, lo cual atribuyo a mi capacidad de enseñar, programar y manejar varias tareas a la vez; una flexibilidad así me ayuda en espacios donde convergen muchas personalidades y estilos de aprendizajes distintos.</p>
+            <p>En los últimos diez años he entrenado equipos de trabajo que han aumentado en un 99,99% su valor individual, productividad y ganas, porque han cambiado su enfoque en cuanto al trabajo.</p>
+            <p>Mi objetivo es ayudar a las personas a desarrollar metas y cumplir objetivos.</p>
+
+            <a href="#contacto" class="btn-primary">Mantente en contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="assets/img/logo.png" alt="VivianChars" height="45" width="45" loading="lazy"/>
+          <span>VivianChars</span>
+        </div>
+        <p></p>
+        <p><a href="mailto:info@misitio.com">info@misitio.com</a></p>
+        <p>Vigo - España</p>
         <p></p>
       </div>
-      
-      <div class="stats-grid">
-        <div class="stat-item fade-up delay-1">
-          <div class="stat-number" data-target="150">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Proyectos Completados</div>
-        </div>
-        
-        <div class="stat-item fade-up delay-2">
-          <div class="stat-number" data-target="95">0</div>
-          <div class="stat-plus">%</div>
-          <div class="stat-label">Precisión en Predicciones</div>
-        </div>
-        
-        <div class="stat-item fade-up delay-3">
-          <div class="stat-number" data-target="2.5">0</div>
-          <div class="stat-plus">M</div>
-          <div class="stat-label">Registros Procesados</div>
-        </div>
-        
-        <div class="stat-item fade-up delay-4">
-          <div class="stat-number" data-target="24">0</div>
-          <div class="stat-plus">/7</div>
-          <div class="stat-label">Soporte Disponible</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- SECCIÓN DE SOCIOS Y CTA -->
-<section class="partners-cta-section">
-  <!-- Logos de socios -->
-  <div class="partners-bar">
-    <div class="partners-container">
-      <div class="partners-title">Nuestros socios</div>
-      <div class="partners-logos">
-        <div class="partner-logo">MIKRON</div>
-        <div class="partner-logo">Pomegranate</div>
-        <div class="partner-logo">Gargoosh</div>
-        <div class="partner-logo">VELO.CITY</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contenido principal -->
-  <div class="cta-content">
-    <div class="cta-container">
-      <!-- Video izquierda -->
-      <div class="cta-video-container fade-up">
-        <video autoplay muted loop playsinline class="cta-video">
-          <!-- AQUÍ VAS A PONER TU VIDEO CUANDO LO ENCUENTRES -->
-          <source src="assets/video/faro02.mp4" type="video/mp4">
-          Tu navegador no soporta videos HTML5.
-        </video>
-        <div class="video-overlay"></div>
-        <div class="video-text">
-          <h3>¿Estás listo para acelerar tu negocio?</h3>
-        </div>
+      <div class="footer-column">
+        <ul class="footer-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#soluciones">Soluciones</a></li>
+          <li><a href="#quien-soy">Visión</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+        <a href="#contacto" class="btn-primary footer-btn">Empezar</a>
       </div>
 
-      <!-- Texto y CTA derecha -->
-      <div class="cta-text-container fade-up delay-1">
-        <div class="cta-text">
-          <p>
-           Si tuviera que definirme en una palabra sería “Experiencia” En más de veinticinco años de estudios del comportamiento humano, PNL, Liderazgo y organización asertiva de estrategias de producción, hacen que mi productividad y utilidad aumente.</p>
-           <p>Soy intuitiva, tengo capacidad de decisión y puedo inspirar valor.</p>
-           <p>Ser madre de tres hijos con altas capacidades me ayudo a desarrollar ciertas habilidades de manejo de la comunicación asertiva.</p>
-           <p>Tanto el conocimiento adquirido por las experiencias de la vida, como la perspectiva adicional obtenidas de mis estudios, trabajos y lectura, han fortalecido mi capacidad de enseñanza y mi habilidad de desarrollar talleres a medida y presentaciones para empresa y particulares.</p>
-           <p>He criado a mis hijos con éxito, lo cual atribuyo a mi capacidad de enseñar, programar y manejar varias tareas a la vez; una flexibilidad así me ayuda en espacios donde convergen muchas personalidades y estilos de aprendizajes distintos.</p>
-           <p>En los últimos diez años he entrenado equipos de trabajo que han aumentado en un 99,99% su valor individual, productividad y ganas, porque han cambiado su enfoque en cuanto al trabajo.</p>
-           <p>Mi objetivo es ayudar a las personas a desarrollar metas y cumplir objetivos.</p>
-          <a href="#" class="btn-primary">Empezar</a>
+      <div class="footer-column">
+        <h4>Suscríbete a nuestro boletín</h4>
+        <form class="footer-form" action="#" method="post">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required />
+          <button type="submit" class="btn-outline">Enviar</button>
+        </form>
+      </div>
+
+      <div class="footer-column">
+        <h4>Síguenos en:</h4>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <!-- Columna 1: Logo y contacto -->
-    <div class="footer-column">
-      <div class="footer-logo">
-        <img src="assets/img/logo.png" alt="Vista.DT" />
-      </div>
-      <p>+52-1-33-12345678</p>
-      <p>info@misitio.com</p>
-      <p>Av. Fray. A. Alcalde 10</p>
-      <p>44100 Guad., Jal., México</p>
+
+    <div class="footer-bottom">
+      <a href="#">Política de privacidad</a>
+      <p>© 2025 Creado por Vista.DT</p>
     </div>
+  </footer>
 
-    <!-- Columna 2: Navegación -->
-    <div class="footer-column">
-      <ul class="footer-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Soluciones</a></li>
-        <li><a href="#">Visión</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <a href="#" class="btn-primary footer-btn">Empezar</a>
-    </div>
-
-    <!-- Columna 3: Suscripción -->
-    <div class="footer-column">
-      <h4>Suscríbete a nuestro boletín</h4>
-      <form class="footer-form">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" placeholder="Tu correo">
-        <button type="submit" class="btn-outline">Enviar</button>
-      </form>
-    </div>
-
-    <!-- Columna 4: Redes sociales -->
-    <div class="footer-column">
-      <h4>Síguenos en:</h4>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Parte inferior -->
-  <div class="footer-bottom">
-    <a href="#">Política de privacidad</a>
-    <p>© 2025 Creado por Vista.DT</p>
-  </div>
-</footer>
-
+  <!-- Scripts -->
+  <script src="assets/scripts/script.js" defer></script>
 </body>
 </html>
-<script src="assets/scripts/script.js"></script>
