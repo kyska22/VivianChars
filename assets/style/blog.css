@@ -1,0 +1,382 @@
+/* =====================================================
+   BLOG PAGE STYLES — Vivian Chars
+   Usa las variables globales de style.css
+   ===================================================== */
+
+/* ===== Hero Blog ===== */
+.blog-hero {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  min-height: 70vh;
+  padding: 120px 5% 60px;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--brand-primary-rgb), 0.08) 0%,
+    rgba(101, 132, 179, 0.15) 100%
+  );
+}
+
+.hero-featured {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--ink-2);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  animation: fade-up 1s ease forwards;
+}
+
+.hero-featured img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  filter: brightness(0.95);
+}
+
+.hero-content {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 16px;
+  color: var(--ink-1);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+}
+
+.hero-content .btn {
+  align-self: flex-start;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 2px solid var(--brand-primary);
+  background: var(--brand-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.hero-content .btn:hover {
+  transform: translateY(-2px);
+  background: #b7956e;
+}
+
+/* ===== Sidebar derecha ===== */
+.sidebar {
+  background: #ffffff;
+  color: var(--ink-2);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  animation: fade-up 1.4s ease forwards;
+}
+
+.sidebar h3 {
+  font-size: 1.25rem;
+  color: var(--ink-1);
+  margin-bottom: 10px;
+}
+
+.post-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 10px;
+  transition: color 0.2s, transform 0.2s;
+}
+.post-link img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.post-link:hover {
+  color: var(--brand-primary);
+  transform: translateX(4px);
+}
+
+/* ===== Paginación ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 60px 0;
+}
+
+.pagination button {
+  background: transparent;
+  border: 2px solid var(--brand-primary);
+  color: var(--brand-primary);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--brand-primary);
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== Currículum ("Sobre Vivian") ===== */
+.about-section {
+  background: var(--brand-blue-1);
+  color: #fff;
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.08),
+    transparent 70%
+  );
+}
+
+.about-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: center;
+  z-index: 2;
+}
+
+.about-container img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+  filter: brightness(0.97);
+}
+
+.about-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== Animaciones ===== */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Scrollbar sidebar (solo en WebKit) ===== */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(var(--brand-primary-rgb) / 0.4);
+  border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--brand-primary-rgb) / 0.7);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .blog-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 100px 5% 60px;
+  }
+  .sidebar {
+    max-height: none;
+    order: 2;
+  }
+  .hero-featured img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 24px;
+  }
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+  .pagination {
+    gap: 10px;
+  }
+  .pagination button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-section {
+    padding: 80px 6%;
+  }
+}
+
+
+/* ===== Currículum Profesional ===== */
+.curriculum-section {
+  background: #f7f9fb;
+  color: var(--ink-1);
+  padding: 100px 5%;
+}
+
+.curriculum-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.curriculum-container h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--ink-2);
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.cv-item h3 {
+  font-size: 1.3rem;
+  color: var(--brand-blue-1);
+  margin-bottom: 12px;
+  border-bottom: 2px solid rgba(var(--brand-primary-rgb), 0.3);
+  padding-bottom: 6px;
+}
+
+.cv-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-item li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+/* ===== Galería ===== */
+.gallery-section {
+  padding: 100px 5%;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 12px;
+  color: var(--ink-1);
+}
+
+.gallery-header p {
+  color: var(--ink-3);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-footer {
+  margin-top: 50px;
+}
+
+.gallery-footer .btn-outline {
+  border: 2px solid var(--brand-primary);
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--brand-primary);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.gallery-footer .btn-outline:hover {
+  background: var(--brand-primary);
+  color: #fff;
+}
+
+/* Reutiliza la animación fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-up 1s ease forwards;
+}
+

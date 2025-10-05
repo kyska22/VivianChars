@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería | Vivian Chars</title>
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="assets/style/blog.css">
+  <link rel="stylesheet" href="assets/style/galeria.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a class="logo" href="/">
+      <img src="assets/img/logo.png" alt="Logo Vivian Chars" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#soluciones">Soluciones</a></li>
+      <li><a href="/#quien-soy">Quién Soy</a></li>
+      <li><a href="/cursos.html">Cursos</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/galeria.html" class="btn-outline">Galería</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero Galería ===== -->
+  <section class="gallery-hero fade-up">
+    <div class="hero-inner">
+      <h1>Galería de Experiencias</h1>
+      <p>Momentos, talleres y vivencias que inspiran nuestro propósito.  
+      Cada imagen refleja el crecimiento y la conexión de nuestras comunidades.</p>
+    </div>
+  </section>
+
+  <!-- ===== Grilla tipo Masonry ===== -->
+  <section class="gallery-grid-section fade-up">
+    <div class="masonry-grid">
+      <div class="masonry-item"><img src="assets/img/gallery/1.jpg" alt=""></div>
+      <div class="masonry-item tall"><img src="assets/img/gallery/2.jpg" alt=""></div>
+      <div class="masonry-item wide"><img src="assets/img/gallery/3.jpg" alt=""></div>
+      <div class="masonry-item"><img src="assets/img/gallery/4.jpg" alt=""></div>
+      <div class="masonry-item wide"><img src="assets/img/gallery/5.jpg" alt=""></div>
+      <div class="masonry-item"><img src="assets/img/gallery/6.jpg" alt=""></div>
+      <div class="masonry-item tall"><img src="assets/img/gallery/7.jpg" alt=""></div>
+      <div class="masonry-item"><img src="assets/img/gallery/8.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- ===== Modal visor ===== -->
+  <div id="gallery-modal" class="gallery-modal" aria-hidden="true">
+    <span class="close-modal" data-close>&times;</span>
+    <img id="modal-image" src="" alt="Imagen ampliada">
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="assets/img/logo.png" alt="Vista.DT" height="45" width="45" />
+          <span>Vista.DT</span>
+        </div>
+        <p>+52-1-33-12345678</p>
+        <p><a href="mailto:info@misitio.com">info@misitio.com</a></p>
+        <p>Av. Fray. A. Alcalde 10</p>
+        <p>44100 Guad., Jal., México</p>
+      </div>
+      <div class="footer-column">
+        <ul class="footer-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#soluciones">Soluciones</a></li>
+          <li><a href="/cursos.html">Cursos</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+        </ul>
+        <a href="#contacto" class="btn-primary footer-btn">Empezar</a>
+      </div>
+      <div class="footer-column">
+        <h4>Suscríbete a nuestro boletín</h4>
+        <form class="footer-form">
+          <input type="email" placeholder="Tu correo" required />
+          <button type="submit" class="btn-outline">Enviar</button>
+        </form>
+      </div>
+      <div class="footer-column">
+        <h4>Síguenos en:</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="#">Política de privacidad</a>
+      <p>© 2025 Creado por Vista.DT</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/scripts/script.js" defer></script>
+  <script src="assets/scripts/gallery.js" defer></script>
+</body>
+</html>
