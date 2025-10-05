@@ -4,7 +4,7 @@
 :root{
   --brand-primary: #a78c68;
   --brand-primary-rgb: 167 140 104;
-  --brand-blue-1: #0d47a1;
+  --brand-blue-1: #025974;;
   --brand-blue-2: #1976d2;
   --ink-1: #0b1e3f;
   --ink-2: #0e2742;
@@ -165,7 +165,7 @@ a:focus{ outline: 2px dashed rgba(255,255,255,.6); outline-offset: 2px; }
    PARALLAX
    ========================== */
 .parallax-section{ position:relative; height:70vh; min-height:520px; overflow:hidden; display:flex; align-items:center; margin-top:10px; }
-.parallax-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-15; will-change: transform; pointer-events:none; }
+.parallax-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-15; will-change: transform; pointer-events:none; }
 .parallax-overlay{
   position:absolute; inset:0; z-index:1;
   background: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,.35) 100%);
